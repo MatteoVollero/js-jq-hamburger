@@ -1,18 +1,17 @@
 var hamburger = $(".header-right .fas");
-var a = $(".header-right a");
+var a = $(".header-right ");
 var hide = false;
 
-a.css("width",69);
 
-
-a.click(
+hamburger.click(
   function(){
     if(hide == false){
-      hamburger.fadeOut("slow");
-      hide = true;
-    }else {
-      hamburger.fadeIn("slow");
-      hide = false;
+        hamburger.animate({opacity : 0});
+        hide = true;
+    }else{
+        hamburger.animate({opacity : 1});
+        hide = false;
     }
+
   }
 );
