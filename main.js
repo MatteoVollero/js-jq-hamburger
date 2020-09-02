@@ -1,17 +1,11 @@
-var hamburger = $(".header-right .fas");
-var a = $(".header-right ");
-var hide = false;
-
-
-hamburger.click(
+$(".header-right .fas.fa-bars").click(
   function(){
-    if(hide == false){
-        hamburger.animate({opacity : 0});
-        hide = true;
-    }else{
-        hamburger.animate({opacity : 1});
-        hide = false;
-    }
+    $(".hamburger-menu").addClass("active");
+  }
+);
 
+$(".hamburger-menu .close").click(
+  function(){
+    $(".hamburger-menu").removeClass("active");
   }
 );
